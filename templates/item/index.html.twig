@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ItemController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    <ul>
+        {% for item in items %}
+        <li>
+            {{ item.name }} {{ item.price|with_tax|number_format }}円
+            {% if item.isPublished == false %}
+            <button type="button" onclick="location.href = '{{ url('item_publish', {id: item.id}) }}';" >公開</button>
+            {% else %}
+                公開中
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url('item_reset') }}">公開状態をリセット</a>
+</div>
+{% endblock %}
