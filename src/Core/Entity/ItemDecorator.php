@@ -6,14 +6,15 @@ namespace App\Core\Entity;
 
 class ItemDecorator
 {
-    /** @var ItemInterface  */
+    /** @var ItemInterface */
     private ItemInterface $item;
 
     /**
      * ItemDecorator constructor.
      * @param ItemInterface $item
      */
-    public function __construct(ItemInterface $item) {
+    public function __construct(ItemInterface $item)
+    {
         $this->item = $item;
     }
 
