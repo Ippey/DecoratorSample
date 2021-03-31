@@ -25,6 +25,7 @@ class ItemDecorator
         $this->item->setUpdatedAt($now);
         $this->item->setIsPublished(false);
     }
+
     public function publish()
     {
         $this->item->setIsPublished(true);

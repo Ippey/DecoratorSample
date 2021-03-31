@@ -17,8 +17,7 @@ class ItemFormType extends AbstractType
         $builder
             ->add('name', TextType::class, ['label' => '商品名'])
             ->add('price', NumberType::class, ['label' => '価格'])
-            ->add('submit', SubmitType::class, ['label' => '追加'])
-        ;
+            ->add('submit', SubmitType::class, ['label' => '追加']);
     }
 
     public function configureOptions(OptionsResolver $resolver)
