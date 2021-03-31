@@ -18,6 +18,13 @@ class ItemDecorator
         $this->item = $item;
     }
 
+    public function add()
+    {
+        $now = new \DateTime();
+        $this->item->setCreatedAt($now);
+        $this->item->setUpdatedAt($now);
+        $this->item->setIsPublished(false);
+    }
     public function publish()
     {
         $this->item->setIsPublished(true);
