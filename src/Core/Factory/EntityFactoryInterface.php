@@ -11,5 +11,5 @@ interface EntityFactoryInterface
     /**
      * @return ItemInterface
      */
-    public static function createItem();
+    public static function createItem(): ItemInterface;
 }
